@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  likes: number = 0;
+  setLikeCount() {
+    this.likes++;
+  }
+
+  isHidden = true;
+  triggerTimeOut = (() => {
+    setTimeout(() => this.isHidden = false, 2250)
+  })
 }
